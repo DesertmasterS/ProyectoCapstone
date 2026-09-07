@@ -1,0 +1,7 @@
+{
+  "name": "SafeAlert",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

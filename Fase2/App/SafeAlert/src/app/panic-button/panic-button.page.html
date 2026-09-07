@@ -1,0 +1,40 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>SafeAlert</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/settings">
+        <ion-icon slot="icon-only" name="settings-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" scroll-y="false">
+  <div class="main-container">
+    
+    <!-- Indicadores de Estado -->
+    <div class="status-indicators">
+      <ion-badge color="success">
+        <ion-icon name="location-outline"></ion-icon> GPS Listo
+      </ion-badge>
+    </div>
+
+    <!-- Botón de Pánico -->
+    <div class="button-wrapper">
+      <button class="panic-btn" (click)="activarAlerta()">
+        <ion-icon name="alert-outline"></ion-icon>
+        <span>S.O.S</span>
+      </button>
+      <p class="instruction-text">Toca para enviar alerta inmediata</p>
+    </div>
+
+    <!-- Navegación Inferior -->
+    <div class="bottom-nav">
+      <ion-button fill="clear" routerLink="/emergency-contacts">
+        <ion-icon slot="start" name="people-outline"></ion-icon>
+        Mis Contactos
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

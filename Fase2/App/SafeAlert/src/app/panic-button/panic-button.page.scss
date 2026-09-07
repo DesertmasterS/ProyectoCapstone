@@ -1,0 +1,75 @@
+/* Centrado de todo el contenido */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.status-indicators {
+  text-align: center;
+  ion-badge {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Diseño del Botón de Pánico */
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panic-btn {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: var(--ion-color-danger); /* Rojo de Ionic */
+  color: white;
+  border: 8px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 30px rgba(235, 68, 90, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: transform 0.1s ease;
+  
+  /* Animación de pulso opcional para llamar la atención */
+  animation: pulse 2s infinite;
+
+  ion-icon {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+
+  &:active {
+    transform: scale(0.95);
+    background: #d3394c;
+  }
+}
+
+.instruction-text {
+  margin-top: 20px;
+  color: var(--ion-color-medium);
+  font-size: 1rem;
+  text-align: center;
+}
+
+.bottom-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Efecto visual de palpitación */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(235, 68, 90, 0.7); }
+  70% { box-shadow: 0 0 0 30px rgba(235, 68, 90, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(235, 68, 90, 0); }
+}
